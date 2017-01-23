@@ -3,9 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <title>Temperature Converter Exercise</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
+
   <h1>Temperature Converter Exercise</h1>
+
+  <div id="wrapper">
+    <p><label>Temperature:</label>
+    <!-- label describes the input -->
+    <input type="number" name="tempInput" size="25" maxlength="40" id="input-field"></p>
+    <label><input type="radio" name="conversion type" value="Celsius" checked="checked" id="Celsius-button"> Celsius</label>
+    <label><input type="radio" name="conversion type" value="Fahrenheit" id="Fahrenheit-button"> Fahrenheit</label>
+    <!-- name is same so you can only have one selected at a time -->
+  </div>
+
+  <div>
+    <button type="button" id="convert-button">Convert!</button>
+    <!-- if you use type = submit it refreshes the page -->
+    <button type="button" id="clear-button">Clear Input</button>
+  </div><br>
+
+  <hr> <!-- horizontal rule that puts a line across the page -->
+    <small>Converted Temp:</small>
+    <div id="converted-temp-output"></div>
+  <hr>
+
 
   <script type="text/javascript" src="converter.js"></script>
 </body>
