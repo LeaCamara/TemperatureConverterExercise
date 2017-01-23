@@ -89,11 +89,15 @@ function toFahrenheit (userTemp) {
 
 // 5. clear-button: when clicked, clears any text in the input field.
 var clearButton = document.getElementById("clear-button").addEventListener("click", function(event) {
-  document.getElementById("input-field").value = "";
-  document.getElementById("converted-temp-output").innerHTML = "";
+  tempInputField.value = "";
+  output.innerHTML = "";
   document.getElementById("Celsius-button").checked = false;
   document.getElementById("Fahrenheit-button").checked = false;
 });
+// "tempInputField" and "output" refer to the variables we set up
+// less concise way is to use the IDs (below):
+  // document.getElementById("input-field").value = "";
+  // document.getElementById("converted-temp-output").innerHTML = "";
 
 // you can chain everything together, or you can break event listeners up and call a function. Either way works!
 //inside the clearButton function that fires after the click event, the input & output values are set to an empty string
